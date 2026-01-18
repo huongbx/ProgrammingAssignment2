@@ -13,14 +13,19 @@ makeCacheMatrix <- function(x = matrix()) {
   }
   
   # 2. Function to get the matrix value
-  get <- function() x
+  get <- function(){
+    x
+  }
   
   # 3. Function to set the inverse (called by cacheSolve)
-  setInverse <- function(inverse) inv <<- inverse
+  setInverse <- function(inverse){
+    inv <<- inverse
+  } 
   
   # 4. Function to get the cached inverse
-  getInverse <- function() inv
-  
+  getInverse <- function() {
+    inv
+  }
   # Return the list of functions
   list(set = set, get = get,
        setInverse = setInverse,
